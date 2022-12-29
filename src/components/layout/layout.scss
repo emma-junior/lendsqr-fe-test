@@ -1,0 +1,10 @@
+.layout {
+
+    .sidebar-outlet {
+        display: flex;
+
+        .outlet {
+            flex: 4;
+        }
+    }
+}

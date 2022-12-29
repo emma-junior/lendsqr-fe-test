@@ -1,0 +1,78 @@
+
+.navbar {
+    background-color: #fff;
+    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+
+    .navbar-wrapper {
+        display: flex;
+        width: 95%;
+        height: 95px;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+
+        .logo-search {
+            display: flex;
+            width: 55%;
+            justify-content: space-between;
+            .logo {
+                display: flex;
+        
+                .union {
+                    width: 20px;
+                }
+                .lendsqr {
+                    width: 115px;
+                    padding: 0 5px;
+                }
+            }
+            .search {
+                position: relative;
+                .search-input {
+                    width: 400px;
+                    height: 40px;
+                    border-radius: 8px;
+                    border: 1px solid #213f7d;
+                    outline: none;
+                    padding: 0 8px;
+                }
+                .search-icon {
+                    background-color: #39cdcc;
+                    padding: 15px 23px;
+                    position: absolute;
+                    width: 14px;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto 0;
+                    right: 0;
+                    border-radius: 0px 8px 8px 0px;
+                }
+            }
+        }
+        .profile {
+            display: flex;
+            height: 100%;
+            align-items: center;
+
+            .docs {
+                font-family: 'Roboto', sans-serif;
+                font-size: 16px;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+            .bell {
+                width: 19px;
+                padding: 0 14px;
+            }
+            .avatar{
+                width: 45px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            .adedeji {
+                padding: 0 7px;
+                cursor: pointer;
+            }
+        }
+    }
+}
