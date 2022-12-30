@@ -1,0 +1,14 @@
+
+.dashboard {
+    font-family: 'Work Sans', sans-serif;
+    h4 {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 28px;
+    }
+    .widgets-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px auto;
+    }
+}

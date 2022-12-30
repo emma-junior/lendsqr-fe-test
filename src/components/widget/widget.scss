@@ -1,0 +1,44 @@
+@mixin icon($iconbg) {
+    background-color: $iconbg;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.widget {
+    width: 180px;
+    height: 120px;
+    background: #fff;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .pink {
+        @include icon(#fce8ff);
+    }
+    .blue {
+        @include icon(#eee8ff);
+    }
+    .orange {
+        @include icon(#feefec);
+    }
+    .red {
+        @include icon(#ffecf0);
+    }
+    .title {
+        font-size: 14px;
+        font-weight: 500;
+        color: #545F7D;
+    }
+    .figure {
+        font-size: 24px;
+        font-weight: 600;
+        color: #545F7D;
+    }
+}

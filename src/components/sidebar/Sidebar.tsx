@@ -49,6 +49,55 @@ const Sidebar = () => {
             <span>Karma</span>
           </li>
           <p>BUSINESSES</p>
+          <li>
+            <img src="assets/icons/briefcase.svg" alt="briefcase" />
+            <span>Organization</span>
+          </li>
+          <li>
+            <img src='assets/icons/loan-request.svg' alt='loan-request' />
+            <span>Loan Products</span>
+          </li>
+          <li>
+            <img src='assets/icons/np_bank.svg' alt='np_bank' />
+            <span>Savings Products</span>
+          </li>
+          <li>
+            <img src='assets/icons/coins-solid.svg' alt='coins-solid' />
+            <span>Fees and Charges</span>
+          </li>
+          <li>
+            <img src='assets/icons/transaction.svg' alt='transaction' />
+            <span>Transactions</span>
+          </li>
+          <li>
+            <img src='assets/icons/galaxy.svg' alt='galaxy' />
+            <span>Services</span>
+          </li>
+          <li>
+            <img src='assets/icons/user-cog.svg' alt='user-cog' />
+            <span>Service Account</span>
+          </li>
+          <li>
+            <img src='assets/icons/scroll.svg' alt='scroll' />
+            <span>Settlements</span>
+          </li>
+          <li>
+            <img src='assets/icons/chart-bar.svg' alt='chart-bar' />
+            <span>Reports</span>
+          </li>
+          <p>SETTINGS</p>
+          <li>
+            <img src='assets/icons/sliders-h.svg' alt='sliders-h' />
+            <span>Preferences</span>
+          </li>
+          <li>
+            <img src='assets/icons/badge-percent.svg' alt='badge-percent' />
+            <span>Fees and Pricing</span>
+          </li>
+          <li>
+            <img src='assets/icons/clipboard-list.svg' alt='clipboard-list' />
+            <span>Audit Logs</span>
+          </li>
         </ul>
       </div>
     </section>
