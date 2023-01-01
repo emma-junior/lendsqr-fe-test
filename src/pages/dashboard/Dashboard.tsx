@@ -1,4 +1,5 @@
 import React from 'react'
+import UserTable from '../../components/userTable/UserTable'
 import Widget from '../../components/widget/Widget'
 import "./dashboard.scss"
 
@@ -12,6 +13,7 @@ const Dashboard = () => {
         <Widget type="USERS WITH LOANS" num={12453} icon="loans_widget" icon_wrapper="orange"/>
         <Widget type="USERS WITH SAVINGS" num={102453} icon="savings_widget" icon_wrapper="red"/>
       </div>
+      <UserTable />
     </section>
   )
 }

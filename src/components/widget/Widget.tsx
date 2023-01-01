@@ -15,7 +15,7 @@ const Widget = ({type, num, icon, icon_wrapper}:Props) => {
           <img src={`assets/icons/${icon}.svg`} alt='icon' />
       </div>
       <p className='title'>{type}</p>
-      <p className='figure'>{num}</p>
+      <p className='figure'>{num.toLocaleString("en-US")}</p>
     </section>
   )
 }
