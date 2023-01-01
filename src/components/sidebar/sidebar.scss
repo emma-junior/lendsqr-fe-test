@@ -1,17 +1,26 @@
+@mixin links($bg-color) {
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #213F7D;
+    background-color: $bg-color;
+}
+
 
 .sidebar {
     min-width: 20%;
     background: #fff;
-    min-height: 100%;  
-    display: flex;
-    justify-content: center;
+    min-height: 100%;
+    color: #213F7D;
     
     .sidebar-wrapper {
         padding: 5px 0;
         font-family: 'Work Sans', sans-serif;
         .switch-org {
             display: flex;
-            padding: 10px 0 20px;
+            padding: 10px 0 20px 20px;
             
             span {
                 padding: 0 5px;
@@ -20,7 +29,7 @@
         }
         .dashboard {
             display: flex;
-            padding: 5px 0;
+            padding: 5px 0 5px 20px;
             span {
                 padding: 0 5px;
                 font-size: 16px;
@@ -28,21 +37,57 @@
         }
         ul {
             p {
-                padding: 25px 0 15px;
+                padding: 20px 0 15px 20px;
                 font-size: 12px;
                 color: #545f7d;
             }
-            li {
-                list-style: none;
-                display: flex;
-                padding: 10px 0;
-                cursor: pointer;
-
-                span {
-                    padding: 0 5px;
-                    font-size: 16px;
+            .active {
+                @include links(#f3fcfc);
+                border-left: 3px solid #39CDCC;
+                li {
+                    padding-left: 20px;
+                    span {
+                        padding: 0 5px;
+                        font-size: 16px;
+                    }
                 }
             }
+            .not-active {
+                @include links(#fff);
+                li {
+                    padding-left: 20px;
+                    span {
+                        padding: 0 5px;
+                        font-size: 16px;
+                    }
+                }
+
+                &:hover {
+                    border-left: 3px solid #39CDCC;
+                    background-color: #f3fcfc;
+                }
+            }
+        }
+        hr {
+            margin: 50px 0 20px;
+            color: #213F7D;
+            opacity: 0.1;
+        }
+        .logout {
+            display: flex;
+            cursor: pointer;
+            padding-left: 20px;
+            span {
+                margin-left: 4px;
+            }
+
+        }
+        p {
+            color: #213F7D;
+            font-weight: 400;
+            font-size: 12px;
+            margin-top: 40px;
+            padding-left: 20px;
         }
     }
 }

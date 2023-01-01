@@ -1,0 +1,56 @@
+@mixin btn($color) {
+    display: flex;
+    width: 98px;
+    height: 40px;
+    border-radius: 8px;
+    color: $color;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form {
+    width: 270px;
+    background: #FFFFFF;
+    border: 1px solid rgba(84, 95, 125, 0.14);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .single-form {
+
+        label {
+            font-weight: 500;
+            font-size: 14px;
+        }
+        input, select {
+            width: 100%;
+            outline: none;
+            height: 35px;
+            border: 1px solid #213F7D;
+            border-radius: 8px;
+        }
+    }
+    .form-btns {
+        display: flex;
+
+        .reset-btn {
+            @include btn(#545F7D);
+            border: 1px solid #545F7D;
+            background: #fff;
+            margin-right: 7px
+        }
+        .filter-btn {
+            @include btn(#fff);
+            background: #39CDCC;
+            border: none;
+        }
+    }
+}
