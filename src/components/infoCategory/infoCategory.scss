@@ -1,0 +1,46 @@
+@mixin gridstyle($num) {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat($num, 1fr);
+    gap: 30px;
+}
+
+.category-info {
+    p {
+        font-weight: 500;
+        font-size: 16px;
+        color: #213F7D;
+    }
+    .five {
+        @include gridstyle(5);
+
+        .mapped-info {
+            
+            .title {
+                font-weight: 400;
+                font-size: 12px;
+            }
+            .answer {
+                font-weight: 500;
+                font-size: 16px;
+            }
+        }
+    }
+    .four {
+        @include gridstyle(4);
+    
+        .mapped-info {
+    
+            .title {
+                font-weight: 400;
+                font-size: 12px;
+            }
+    
+            .answer {
+                font-weight: 500;
+                font-size: 16px;
+            }
+        }
+    }
+
+}

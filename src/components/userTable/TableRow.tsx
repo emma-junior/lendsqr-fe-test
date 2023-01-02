@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { User } from '../../models/users';
 import moment from 'moment'
+import { Link } from "react-router-dom" 
 
 interface Props {
   row:User
@@ -20,18 +21,24 @@ const TableRow = ({row}:Props) => {
         <td onClick={() => setMorePopup(!morePopup)}>
             <img onClick={() => setMorePopup(!morePopup)} className='more-icon' src='assets/icons/ic-more.svg' alt='' />
             {morePopup &&<ul>
-                <li>
-                    <img src='assets/icons/view.svg' alt='view' />
-                    <p>View Details</p>
-                </li>
-                <li onClick={() => setStatus("blacklisted")}>
-                    <img src='assets/icons/delete-friend.svg' alt='view' />
-                    <p>Blacklist User</p>
-                </li>
-                <li onClick={() => setStatus("active")}>
-                    <img src='assets/icons/activate-user.svg' alt='view' />
-                    <p>Activate User</p>
-                </li>
+                <Link className='popup-link' to ={`/user/${row.id}`}>
+                    <li>
+                        <img src='assets/icons/view.svg' alt='view' />
+                        <p>View Details</p>
+                    </li>
+                </Link>
+                <Link className='popup-link' to ="#">
+                    <li onClick={() => setStatus("blacklisted")}>
+                        <img src='assets/icons/delete-friend.svg' alt='view' />
+                        <p>Blacklist User</p>
+                    </li>
+                </Link>
+                <Link className='popup-link' to ="#">
+                    <li onClick={() => setStatus("active")}>
+                        <img src='assets/icons/activate-user.svg' alt='view' />
+                        <p>Activate User</p>
+                    </li>
+                </Link>
             </ul>}
         </td>
     </tr>
