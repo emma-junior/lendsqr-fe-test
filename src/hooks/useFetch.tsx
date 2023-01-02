@@ -1,5 +1,4 @@
-import React,{useState, useEffect} from 'react'
-import { User } from '../models/users';
+import {useState, useEffect} from 'react'
 
 
 const useFetch = (id:string) => {

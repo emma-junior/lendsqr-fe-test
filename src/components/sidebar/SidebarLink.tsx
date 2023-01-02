@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
-import { linkType } from './data';
 import { sidebartype } from '../../models/sidebartype';
 
 interface Props {
@@ -20,7 +19,7 @@ const SidebarLink = ({data}:Props) => {
                 }
               >
                 <li>
-                  <img src={`assets/icons/${link.icon}.svg`} alt='users' />
+                  <img src={`/assets/icons/${link.icon}.svg`} alt='users' />
                   <span>{link.title}</span>
                 </li>
               </NavLink>

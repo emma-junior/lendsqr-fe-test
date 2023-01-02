@@ -1,0 +1,94 @@
+
+.details-header {
+    background: #FFFFFF;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    padding: 15px;
+    .profile {
+        display: flex;
+        height: 120px;
+        align-items: center;
+
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .name-acc {
+            .name {
+                font-weight: 500;
+                font-size: 22px;
+                color: #213F7D;
+            }
+            .acc {
+                font-weight: 400;
+                font-size: 14px;
+            }
+        }
+        .user-tier {
+            border-right: 2px solid #e6dedec7;
+            border-left: 2px solid #e6dedec7;
+            display: flex;
+            height: 50%;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 20px;
+            padding: 0 20px;
+
+            .wrapper {
+                margin: auto;
+                p {
+                    font-weight: 500;
+                    font-size: 15px;
+                    color: #545F7D;
+                }
+                .rating {
+                    display: flex;
+                    margin: auto;
+                    .star {
+                        height: 14px;
+                        width: 15px;
+                    }
+                }
+            }
+        }
+        .account-balance {
+            color: #213F7D;
+            .balance {
+                font-weight: 500;
+                font-size: 22px;
+            }
+            .bank {
+                font-weight: 400;
+                font-size: 12px;
+            }
+        }
+    }
+    .profile-links {
+        margin-top: 35px;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            li {
+                list-style: none;
+                width: 150px;
+                text-align: center;
+                padding: 5px 0;
+                cursor: pointer;
+
+                &:hover {
+                    color: #39CDCC;
+                    border-bottom: 2px solid #39CDCC;
+                }
+            }
+            .active {
+                color: #39CDCC;
+                border-bottom: 2px solid #39CDCC;
+            }
+        }
+    }
+}
