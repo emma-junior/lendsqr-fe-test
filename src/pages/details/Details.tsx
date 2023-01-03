@@ -152,7 +152,7 @@ const Details = () => {
     <section className='details'>
       {isError && <div className='error'>{isError}</div>}
       {isloading && <div className='loader'>Loading...</div>}
-      <Link className='back' to="/">
+      <Link className='back' to="/users">
           <img className='arrow' src='/assets/icons/back.svg' alt='arrow' />
           <p>Back to Users</p>
       </Link>

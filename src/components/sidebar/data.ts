@@ -13,7 +13,7 @@ export const customers:linkType["link"] = [
     id: 1,
     icon: "users",
     title: "Users",
-    link: "/"
+    link: "/users"
   },
   {
     id: 2,

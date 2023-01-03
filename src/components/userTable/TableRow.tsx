@@ -21,7 +21,7 @@ const TableRow = ({row}:Props) => {
         <td onClick={() => setMorePopup(!morePopup)}>
             <img onClick={() => setMorePopup(!morePopup)} className='more-icon' src='assets/icons/ic-more.svg' alt='' />
             {morePopup &&<ul>
-                <Link className='popup-link' to ={`/user/${row.id}`}>
+                <Link className='popup-link' to ={`/users/${row.id}`}>
                     <li>
                         <img src='assets/icons/view.svg' alt='view' />
                         <p>View Details</p>
