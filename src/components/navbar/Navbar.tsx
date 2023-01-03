@@ -1,4 +1,5 @@
 import React from 'react'
+import Logo from '../logo/Logo'
 import "./navbar.scss"
 
 const Navbar = () => {
@@ -6,10 +7,7 @@ const Navbar = () => {
     <nav className='navbar'>
       <section className='navbar-wrapper'>
         <div className='logo-search'>
-          <div className='logo'>
-            <img className='union' src='/assets/icons/Union.svg' alt='union' />
-            <img className='lendsqr' src='/assets/icons/lendsqr.svg' alt='lendsqr' />
-          </div>
+          <Logo />
           <div className='search'>
             <input className='search-input' placeholder='Search for anything' />
             <img className='search-icon' src='/assets/icons/Vector.svg' alt='search' />

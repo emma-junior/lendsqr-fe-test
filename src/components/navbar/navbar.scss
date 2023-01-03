@@ -15,17 +15,7 @@
             display: flex;
             width: 55%;
             justify-content: space-between;
-            .logo {
-                display: flex;
-        
-                .union {
-                    width: 20px;
-                }
-                .lendsqr {
-                    width: 115px;
-                    padding: 0 5px;
-                }
-            }
+            
             .search {
                 position: relative;
                 .search-input {

@@ -4,6 +4,7 @@ import { customers } from './data';
 import { businesses } from './data';
 import { settings } from './data';
 import SidebarLink from './SidebarLink';
+import { Link } from 'react-router-dom';
 
 
 const Sidebar = () => {
@@ -28,10 +29,12 @@ const Sidebar = () => {
           <SidebarLink data={settings} />
         </ul>
         <hr />
-        <div className='logout'>
-          <img src='/assets/icons/sign-out.svg' alt='signout' />
-          <span>Logout</span>
-        </div>
+        <Link className='logout-link' to="/login">
+          <div className='logout'>
+            <img src='/assets/icons/sign-out.svg' alt='signout' />
+            <span>Logout</span>
+          </div>
+        </Link>
         <p>v1.2.0</p>
       </div>
     </section>
