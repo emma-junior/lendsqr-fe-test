@@ -1,3 +1,17 @@
+@import "../../variables/variables";
+
+@mixin tab {
+    @media (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
 @mixin background() {
     background-color: #fff;
     border-radius: 4px;
@@ -16,6 +30,10 @@
     display: flex;
     font-size: 14px;
     font-weight: 400;
+    @include tab {
+        margin: 10px;
+    }
+    
 
     p {
         display: flex;

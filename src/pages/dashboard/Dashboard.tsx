@@ -1,4 +1,3 @@
-import React from 'react'
 import UserTable from '../../components/userTable/UserTable'
 import Widget from '../../components/widget/Widget'
 import "./dashboard.scss"

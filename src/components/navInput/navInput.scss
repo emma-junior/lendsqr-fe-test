@@ -1,0 +1,46 @@
+@import "../../variables/variables";
+
+@mixin tab {
+    @media (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+.search {
+    position: relative;
+    margin: 0 auto;
+    @include tab {
+        width: 300px;
+    }
+    .search-input {
+        width: 400px;
+        height: 40px;
+
+        @include tab {
+            width: 300px;
+        }
+
+        border-radius: 8px;
+        border: 1px solid #213f7d;
+        outline: none;
+        padding: 0 8px;
+    }
+
+    .search-icon {
+        background-color: #39cdcc;
+        padding: 15px 23px;
+        position: absolute;
+        width: 14px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        right: -20px;
+        border-radius: 0px 8px 8px 0px;
+    }
+}

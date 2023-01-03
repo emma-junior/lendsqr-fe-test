@@ -1,7 +1,7 @@
 import React from 'react'
 import LoginImage from '../../components/loginImage/LoginImage'
-import LogoForm from '../../components/logoForm/LogoForm'
 import "./login.scss"
+import LoginForm from '../../components/loginForm/LoginForm'
 
 
 const Login = () => {
@@ -9,7 +9,7 @@ const Login = () => {
     <section className='login'>
         <div className='login-wrapper'>
             <div className='log-img'><LoginImage /></div>
-            <div className='log-form'><LogoForm /></div>
+            <div className='log-form'><LoginForm /></div>
         </div>
     </section>
   )

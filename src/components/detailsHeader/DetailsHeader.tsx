@@ -7,10 +7,9 @@ interface Props {
 }
 const DetailsHeader = ({details}:Props) => {
   return (
-    <section className='details-header'>
-        
+    <section className='details-header'>       
         <div className='profile'>
-            <img src={details?.profile.avatar} alt='profile-img' />
+            <div className='img-wrapper'><img src={details?.profile.avatar} alt='profile-img' /></div>
             <div className='name-acc'>
                 <p className='name'>{details?.profile.firstName}{" "}{details?.profile.lastName}</p>
                 <p className='acc'>{details?.accountNumber}</p>

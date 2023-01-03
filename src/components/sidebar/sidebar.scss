@@ -1,3 +1,17 @@
+@import "../../variables/variables";
+
+@mixin tab {
+    @media (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
 @mixin links($bg-color) {
     list-style: none;
     display: flex;
@@ -10,10 +24,23 @@
 
 
 .sidebar {
-    min-width: 20%;
-    background: #fff;
-    min-height: 100%;
-    color: #213F7D;
+
+    .cancel-wrapper {
+        width: 90%;
+        display: flex;
+        justify-content: flex-end;
+        margin: 15px 0;
+        
+        
+        .cancel {
+            
+            width: 20px;
+            display: none;
+            @include mobile {
+                display: block;
+            }
+        }
+    }
     
     .sidebar-wrapper {
         padding: 5px 0;
@@ -45,20 +72,28 @@
                 @include links(#f3fcfc);
                 border-left: 3px solid #39CDCC;
                 li {
-                    padding-left: 20px;
+                    padding: 5px 0 5px 20px;
                     span {
                         padding: 0 5px;
                         font-size: 16px;
+                        @include mobile {
+                            padding: 0 5px;
+                            font-size: 18px;
+                        }
                     }
                 }
             }
             .not-active {
                 @include links(#fff);
                 li {
-                    padding-left: 20px;
+                    padding: 5px 0 5px 20px;
                     span {
                         padding: 0 5px;
                         font-size: 16px;
+                        @include mobile {
+                            padding: 0 5px;
+                            font-size: 18px;
+                            }
                     }
                 }
 
@@ -91,6 +126,9 @@
             font-weight: 400;
             font-size: 12px;
             margin-top: 40px;
+            @include mobile {
+                padding-bottom: 100px;
+            }
             padding-left: 20px;
         }
     }
