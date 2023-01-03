@@ -1,11 +1,37 @@
-.login-img {
+@import "../../variables/variables";
 
+@mixin tab {
+    @media (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+.login-img {
+    @include tab {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .logo-wrapper {
         padding: 30px;
+        @include tab {
+            padding: 20px auto;
+        }
     }
     .pic {
         margin-top: 60px;
         width: 600px;
         height: 337.57px;
+
+        @include mobile {
+            width: 320px;
+            height: 220px;
+        }
     }
 }

@@ -1,3 +1,17 @@
+@import "../../variables/variables";
+
+@mixin tab {
+    @media (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
 @mixin btn($color) {
     display: flex;
     width: 170px;
@@ -12,6 +26,11 @@
     font-weight: 600;
     font-size: 14px;
     cursor: pointer;
+    @include mobile {
+        width: 150px;
+        height: 35px;
+        font-size: 12px;
+    }
 }
 
 .details {
@@ -22,6 +41,9 @@
         height: 7px;
         align-items: center;
         text-decoration: none;
+        @include mobile {
+            margin-bottom: 20px;
+        }
 
         p {
             margin-left: 5px;
@@ -32,6 +54,10 @@
         height: 80px;
         justify-content: space-between;
         align-items: center;
+        @include tab {
+            display: block;
+            margin: 20px 0;
+        }
         p {
             color: #213F7D;
             font-weight: 500;

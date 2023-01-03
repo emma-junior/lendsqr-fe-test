@@ -1,12 +1,32 @@
+@import "../../variables/variables";
+
+@mixin tab {
+    @media (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
 .logo {
     display: flex;
 
     .union {
         width: 20px;
+        @include mobile {
+            width: 15px;
+        }
     }
 
     .lendsqr {
         width: 115px;
+        @include mobile {
+            width: 100px;
+        }
         padding: 0 5px;
     }
 }

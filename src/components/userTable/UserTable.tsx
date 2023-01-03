@@ -31,8 +31,10 @@ const UserTable = () => {
                     {headers.map((row, index) => {
                         return (
                             <td key={index}>
-                                {row}
-                                <img onClick={() => setFilterForm(!filterForm)} className='filter-icon' src='/assets/icons/filter-table.svg' alt='' />
+                                <span>
+                                    <p>{row}</p>
+                                    <img onClick={() => setFilterForm(!filterForm)} className='filter-icon' src='/assets/icons/filter-table.svg' alt='' />
+                              </span>
                             </td>
                         )
                     })}
@@ -48,18 +50,6 @@ const UserTable = () => {
 
         {/* page size and pagination */}
         <section className='pagesize_pagination'>
-            {/* <div className='table-size'>
-                <p>Showing</p>
-                <div onClick={() => setPageSizeDropdown(!pageSizeDropdown)} className='page-size'>
-                    <p>{pageSize}</p>
-                    <img className='arrow' src='/assets/icons/arrowdown.svg' alt='arrow' />
-                    {pageSizeDropdown && <ul>
-                        <li onClick={() => setPageSize(9)}>9</li>
-                        <li onClick={() => setPageSize(12)}>12</li>
-                    </ul>}
-                </div>
-                <p>out of 500</p>
-            </div> */}
             <TableSize pageSize={pageSize} setPageSize={setPageSize} />
             <div>
                 <Pagination

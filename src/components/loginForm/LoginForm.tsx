@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
-import "./logoForm.scss"
+import "./loginForm.scss"
 
-const LogoForm = () => {
+const LoginForm = () => {
     const [visible, setVisible] = useState<boolean>(false)
     const [input, setInput] = useState<string>("password")
 
@@ -26,4 +26,4 @@ const LogoForm = () => {
   )
 }
 
-export default LogoForm
+export default LoginForm

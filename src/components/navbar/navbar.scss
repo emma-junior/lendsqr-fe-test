@@ -1,12 +1,32 @@
+@import "../../variables/variables";
+
+@mixin tab {
+    @media (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
 
 .navbar {
     background-color: #fff;
     box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+    @include mobile {
+        padding-bottom: 10px;
+    }
 
     .navbar-wrapper {
         display: flex;
         width: 95%;
         height: 95px;
+        @include mobile {
+            height: 80px;
+        }
         align-items: center;
         justify-content: space-between;
         margin: 0 auto;
@@ -14,30 +34,24 @@
         .logo-search {
             display: flex;
             width: 55%;
+            @include mobile {
+                width: 47%;
+            }
             justify-content: space-between;
-            
-            .search {
-                position: relative;
-                .search-input {
-                    width: 400px;
-                    height: 40px;
-                    border-radius: 8px;
-                    border: 1px solid #213f7d;
-                    outline: none;
-                    padding: 0 8px;
-                }
-                .search-icon {
-                    background-color: #39cdcc;
-                    padding: 15px 23px;
-                    position: absolute;
-                    width: 14px;
-                    top: 0;
-                    bottom: 0;
-                    margin: auto 0;
-                    right: 0;
-                    border-radius: 0px 8px 8px 0px;
+
+            .bar {
+                display: none;
+                @include mobile {
+                    display: block;
                 }
             }
+            .lg-search-input {
+                display: block;
+                @include mobile {
+                   display: none;
+                }
+            }
+            
         }
         .profile {
             display: flex;
@@ -47,15 +61,21 @@
             .docs {
                 font-family: 'Roboto', sans-serif;
                 font-size: 16px;
+                @include mobile {
+                    font-size: 12px;
+                }
                 text-decoration: underline;
                 cursor: pointer;
             }
             .bell {
                 width: 19px;
-                padding: 0 14px;
+                @include mobile {
+                    width: 17px;
+                }
+                padding: 0 8px;
             }
             .avatar{
-                width: 45px;
+                width: 35px;
                 border-radius: 50%;
                 object-fit: cover;
             }
@@ -63,6 +83,13 @@
                 padding: 0 7px;
                 cursor: pointer;
             }
+        }
+    }
+    .sm-search-input {
+        display: none;
+        
+        @include mobile {
+            display: block;
         }
     }
 }

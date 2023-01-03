@@ -1,11 +1,52 @@
+@import "../../variables/variables";
+
+@mixin tab {
+    @media (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
 .layout {
 
     .sidebar-outlet {
         display: flex;
 
+        .sidebar-container {
+            position: relative;
+            overflow-y: scroll;
+            height: 100vh;
+            z-index: 10;
+            min-width: 20%;
+            background: #fff;
+            color: #213F7D;
+
+            @include mobile {
+                position: absolute;
+                width: 80%;
+                height: 90vh;
+            }
+            
+            @include tab {
+                min-width: 30%;
+            }
+        }
         .outlet {
             min-width: 70%;
+            margin: 0 auto;
             padding: 50px;
+            position: relative;
+            overflow-y: scroll;
+            height: 90vh;
+
+            @include tab {
+                padding: 20px;
+            }
         }
     }
 }

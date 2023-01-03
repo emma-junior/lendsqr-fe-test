@@ -1,3 +1,17 @@
+@import "../../variables/variables";
+
+@mixin tab {
+    @media (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
 @mixin gridstyle($num) {
     margin-top: 30px;
     display: grid;
@@ -13,6 +27,14 @@
     }
     .five {
         @include gridstyle(5);
+        @include tab {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        @include mobile {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px;
+        }
 
         .mapped-info {
             
@@ -28,7 +50,15 @@
     }
     .four {
         @include gridstyle(4);
-    
+        @include tab {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        @include mobile {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px;
+        }
+
         .mapped-info {
     
             .title {

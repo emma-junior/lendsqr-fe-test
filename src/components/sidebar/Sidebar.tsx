@@ -6,10 +6,18 @@ import { settings } from './data';
 import SidebarLink from './SidebarLink';
 import { Link } from 'react-router-dom';
 
+interface Props {
+  sidebar:boolean
+  setSidebar:React.Dispatch<React.SetStateAction<boolean>>
+}
+const Sidebar = ({sidebar, setSidebar}:Props) => {
 
-const Sidebar = () => {
+
   return (
     <section className='sidebar'>
+      <div className='cancel-wrapper'>
+        <img onClick={() => setSidebar(!sidebar)} className='cancel' width={20} src="/assets/icons/cancel.svg" alt="cancel" />
+        </div>
       <div className='sidebar-wrapper'>
         <div className='switch-org'>
           <img src="/assets/icons/briefcase.svg" alt="briefcase" />

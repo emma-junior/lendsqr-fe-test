@@ -1,3 +1,17 @@
+@import "../../variables/variables";
+
+@mixin tab {
+    @media (max-width: $tab) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
 @mixin icon($iconbg) {
     background-color: $iconbg;
     width: 35px;
@@ -9,6 +23,10 @@
 }
 .widget {
     width: 180px;
+    @include mobile {
+        width: 240px;
+        margin: 0 auto;
+    }
     height: 120px;
     background: #fff;
     border: 1px solid rgba(33, 63, 125, 0.06);
