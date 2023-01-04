@@ -28,26 +28,28 @@ const LoginForm = () => {
   return (
     <section className='login-form'>
         <div className='form-wrapper'>
-            <p className='welcome'>Welcome!</p>
+            <p data-cy='welcome' className='welcome'>Welcome!</p>
             <p className='enter-details'>Enter details to login.</p>
-            {error && <p className='error'>Please enter all credentials</p>}
+            {error && <p data-cy='error-msg' className='error'>Please enter all credentials</p>}
             <input 
               value={email}
               onChange={(e) => setEmail(e.target.value)} 
               type="email" 
               placeholder='Email'
+              data-cy='email'
              />
             <div className='form-password'>
                 <input
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   type={input} 
-                  placeholder='Password' 
+                  placeholder='Password'
+                  data-cy='password'
                 />
                 {visible ? <p onClick={togglePassword} className='shown-password'>HIDE</p>: <p onClick={togglePassword} className='shown-password'>SHOW</p>}
             </div>
             <p className='forgot-password'>FORGOT PASSWORD?</p>
-            <button onClick={handleClick} className='login-btn'>LOGIN</button>
+            <button data-cy='login-btn' onClick={handleClick} className='login-btn'>LOGIN</button>
         </div>
     </section>
   )
