@@ -12,7 +12,6 @@ const UserTable = () => {
     const { data, isloading, isError } = useFetch("");
 
     const [pageSize, setPageSize] = useState<number>(9)
-    // const [pageSizeDropdown, setPageSizeDropdown] = useState<boolean>(false)
     const [filterForm, setFilterForm] = useState<boolean>(false)
     const [currentPage, setCurrentPage] = useState<number>(1);
 
@@ -25,7 +24,7 @@ const UserTable = () => {
     }, [currentPage, data, pageSize]);
   return (
     <>
-        <table >
+        <table data-cy='user-table' >
             <thead>
                 <tr>
                     {headers.map((row, index) => {
@@ -33,7 +32,7 @@ const UserTable = () => {
                             <td key={index}>
                                 <span>
                                     <p>{row}</p>
-                                    <img onClick={() => setFilterForm(!filterForm)} className='filter-icon' src='/assets/icons/filter-table.svg' alt='' />
+                                    <img data-cy='filter-icon' onClick={() => setFilterForm(!filterForm)} className='filter-icon' src='/assets/icons/filter-table.svg' alt='' />
                               </span>
                             </td>
                         )
@@ -41,7 +40,7 @@ const UserTable = () => {
                 </tr>
             </thead>
             <tbody>
-                {filterForm && <span className='filter-form'><FilterForm /></span>}
+                {filterForm && <span data-cy='filter-form' className='filter-form'><FilterForm /></span>}
                 {isError && <div className='error'>{isError}</div>}
                 {isloading && <div className='loader'>Loading...</div>}
                 {currentData?.map((row) =>  <TableRow key={row.id} row={row} />)}               

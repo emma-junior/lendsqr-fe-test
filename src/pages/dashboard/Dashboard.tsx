@@ -5,7 +5,7 @@ import "./dashboard.scss"
 const Dashboard = () => {
   return (
     <section className='dashboard'>
-      <h4>Users</h4>
+      <h4 data-cy='users'>Users</h4>
       <div className='widgets-wrapper'>
         <Widget type="USERS" num={2453} icon="users_widget" icon_wrapper="pink"  />
         <Widget type="ACTIVE USERS" num={2453} icon="active_widget" icon_wrapper="blue"/>
