@@ -13,23 +13,15 @@
 }
 
 .layout {
-
     .sidebar-outlet {
         display: flex;
 
         .sidebar-container {
-            position: relative;
-            overflow-y: scroll;
-            height: 100vh;
-            z-index: 10;
             min-width: 20%;
-            background: #fff;
-            color: #213F7D;
 
             @include mobile {
                 position: absolute;
-                width: 80%;
-                height: 90vh;
+                min-width: 80%;
             }
             
             @include tab {
@@ -38,15 +30,13 @@
         }
         .outlet {
             min-width: 70%;
-            margin: 0 auto;
+            margin: 90px auto 10px;
             padding: 50px;
-            position: relative;
-            overflow-y: scroll;
-            height: 90vh;
 
-            @include tab {
-                padding: 20px;
+            @include mobile {
+                padding: 60px 20px;
             }
+            
         }
     }
 }
